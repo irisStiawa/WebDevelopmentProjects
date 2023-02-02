@@ -1,0 +1,970 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+@font-face {
+    font-family: 'gready_thin';
+    src: url('fonts/gready_personal_use_only-thin-webfont.woff2') format('woff2'),
+         url('fonts/gready_personal_use_only-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gready_regular';
+    src: url('fonts/gready_personal_use_only-regular-webfont.woff2') format('woff2'),
+         url('fonts/gready_personal_use_only-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+
+#indexMain, #registrationMain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000000;
+    z-index: 1;
+}
+
+#indexMain{
+    height:100vh;
+    background-image: url('../img/projectImages/bg_index.jpg');
+}
+
+#registrationMain{
+    min-height: 100vh;
+    background-image: url('../img/projectImages/bg_registration.jpg');
+    color: #ffffff;
+    
+}
+
+#indexH1, #registrationH1{
+    text-align: center;
+    font-family: 'gready_thin';
+    font-size: 4em;
+    
+}
+
+#indexH1{
+    margin-top: 1.5em;
+}
+
+#registrationH1{
+    margin-top: 1em;
+    
+}
+
+#errorMsg{
+    color: rgb(218, 0, 0);
+}
+
+.border-dark{
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+.border-light{
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.border-light:hover{
+    background-color: rgba(250,250,250,0.2);
+    color: #ffffff;
+}
+.border-dark:hover{
+    background-color: rgba(0,0,0,0.2);
+    color: #000000;
+}
+
+.border-light:active, .border-dark:active{
+    opacity: 0.5;
+    box-shadow: unset;
+}
+
+#approvedView{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#approvedDiv{
+    z-index: 1001;
+    background-color: #ffffff;
+}
+
+footer{
+ 
+    width: 100vw;
+    z-index: 100;
+}
+
+
+.hidden{
+    display: none;
+}
+
+/* login.php */
+
+.navbar-brand{
+    font-size: 2em;
+    font-weight: 300;
+}
+
+
+a.nav-link{
+    font-size: 0.9em;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.5)
+}
+
+.fa-user-circle{
+    font-size: 2.3em;
+}
+
+#loginMain{
+    background-image: url('../img/projectImages/slide1.jpg');
+    min-height: 30vh;
+    background-size: cover;
+    animation-name: slideshow;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slideshow{
+    15% {background-image: url('../img/projectImages/slide2.jpg');}
+    30% {background-image: url('../img/projectImages/slide3.jpg');}
+    45% {background-image: url('../img/projectImages/slide4.jpg');}
+    100% {background-image: url('../img/projectImages/slide5.jpg');}
+}
+
+#loginLink{
+    color: #ffffff;
+}
+
+#loginLink:hover{
+    text-decoration: none;
+    color: #ffffffce;
+    
+}
+
+
+
+.font-gready-thin{
+    font-family: "gready_thin";
+}
+
+.border-grey{
+    color:rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.font-weight-500{
+    font-weight: 500;
+}
+
+a{
+    cursor: pointer;
+}
+
+#loginContainer{
+    background-color: #9f8e8280;
+}
+
+.blogImg{
+    width: 300px;
+}
+
+.label-blogtyp, .show-type{
+    font-size: 0.8em;
+}
+
+/* taskmanager.php */
+
+#taskMain{
+    background-image: url('../img/projectImages/bg_taskmanager.jpg');
+    min-height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#taskH1{
+    letter-spacing: 0.5em;
+}
+
+#taskContainer{
+    background-color: #26031f;
+    min-height: 60vh;
+}
+
+#tasks{
+    height: 40vh;
+}
+
+#tasks > div{
+    box-shadow: 0 .1rem 5px rgba(0,0,0,.25)
+}
+
+.fa-trash, .fa-eye, .fa-pencil-alt{
+    font-size: 1em;
+    color: rgba(0,0,0,.7);
+}
+
+.fa-trash:hover, .fa-eye:hover, .fa-pencil-alt:hover{
+    color: #000000;
+}
+
+.imgtask{
+    width: 15px;
+    height: 15px;
+}
+
+#addtask, #edittask, #showtask, #edituser, #addlink, #addfiles, #remindertasks{
+    background-color: rgba(0, 0, 0, 0.5);
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+
+}
+
+.done{
+    color: rgb(173, 177, 173);
+    opacity: 0.5;
+}
+
+.isdone{
+    color: rgb(28, 187, 28);
+    opacity: 1;
+}
+
+.active{
+    opacity: 0.5;
+}
+
+
+/* profile.php */
+
+#navUserImage, .imgCommuntityChat{
+    height: 35px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+#profilMain{
+    background-image: url('../img/projectImages/bg_profil.jpg');
+
+    min-height: 30vh;
+    background-size: cover;
+   
+}
+
+#profilMain > h1{
+    opacity: 0.7;
+}
+
+#useroptions{
+    background-color: #5a4a32;
+    min-height: 30vh;
+}
+
+#profildata{
+    background-color: #ffffff67;
+}
+
+#profilH2{
+    font-weight: 400;
+}
+
+.col-6{
+    position: unset;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px; 
+    
+}
+
+.avatar-edit{
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+}
+
+.avatar-edit > form {
+    display: none;
+}
+
+.avatar-edit > form, .avatar-edit > label {
+    
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all .2s ease-in-out;
+    
+}
+
+.avatar-edit > form:hover, .avatar-edit > label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.avatar-edit > form::after, .avatar-edit > label::after  {
+    content: "\f303";
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #757575;
+    position: absolute;
+    text-align: center;
+    
+    margin: auto;
+}
+
+.avatar-edit > form::after{
+    top: 8.5px;
+    right: 0;
+}
+
+.avatar-edit > label::after {
+    display: inline-block;
+    top: 5.5px;
+    right: 9px;
+    
+}
+    
+.avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+   
+}
+
+.avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/projectImages/alternativImage.jpg);
+}
+
+.bold{
+    font-weight: 400;
+}
+
+.pencil-opacity{
+    opacity: 0.5em;
+    font-size: 0.9em;
+}
+
+/* gallery.php */
+
+#galleryMain{
+    background-image: url(../img/projectImages/bg_gallery.png);
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+}
+
+#galleryExplain{
+    letter-spacing: 0.4em;
+    font-weight: 200;
+    font-size: 1.2em;
+}
+
+#galleryContainer{
+    min-height:65vh;
+    background-color: #756a61;
+    
+    
+}
+
+#labelGalleryUpload{
+    color: #ffffff;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.divGallery{
+    height: 200px;
+    position: relative;
+}
+
+.galleryImage{
+    height: 100%;
+}
+
+.hoverImage{
+    background-color: #0000006c;
+    font-size: 2.5em;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.galleryTrash, .galleryShow{
+    color: #ffffff79;
+}
+
+.galleryTrash:hover, .galleryShow:hover{
+    color:#ffffffd8;
+}
+
+.divGallery:hover > .hoverImage{
+    display: flex;
+
+}
+
+#slideShow{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000a2;
+}
+
+#closeSlideShow{
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    color: #ffffff;
+    opacity: 0.9;
+    font-size: 2em;
+    display: block;
+
+}
+
+#left, #right{
+    color: #ffffff;
+
+    opacity: 0.9;
+    font-size: 3em;
+    display: block;
+}
+
+#divInnerShow{
+    width:80%;
+}
+
+.imgSlideShow{
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+
+#communityMain{
+    height:30vh;
+    background-image: url(../img/projectImages/bg_community.jpg);
+    background-size: cover;
+    background-position: start;
+}
+
+#communityExplain{
+    letter-spacing: 0.3em;
+}
+
+#communityContainer{
+    min-height: 60vh;
+    background-color: #a5a582;
+}
+
+.stamp, .comments, .commentStamp{
+    font-size: 0.7em;
+    color: #00000054;
+}
+
+.commentsView{
+    border-top: 1px solid #00000018;
+}
+
+.comments{
+    cursor: pointer;
+}
+
+.comment{
+    max-width: 60%;
+}
+
+.communityUserName, .commentUserName{
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.commentUserName{
+    width: 100px;
+}
+
+#inputNewMsg, .inputNewComment{
+    border: none;
+}
+
+textarea{
+    resize: none;
+}
+
+#btnNewMsg, .btnNewComment{
+    border-radius: 20px;
+    font-size: 0.9em;
+    height: 35px;
+    background-color: #6b6b54;
+    color: #ffffff;
+    border: none;
+}
+
+#btnNewMsg:hover, .btnNewComment:hover{
+    font-weight: 500;
+    background-color: #5a5a48;
+}
+
+#btnNewMsg:active, .btnNewComment:active{
+    opacity: 0.8;
+}
+
+
+.commentStamp{
+    right: 0;
+}
+
+
+#developmentMain{
+    height: 30vh;
+    background-image: url('../img/projectImages/bg_development.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#developmentContainer{
+    min-height: 65vh;
+    background-color: #130042;
+}
+
+#formDevFile, #divLinkPicture, #divNewFile{
+    width: 100%;
+    border: 2px solid #003466;
+    position: relative;
+    text-align: center;
+}
+
+#labelFileUpload, #labelLinkPicture{
+    display: block;
+    text-decoration: underline;
+    
+    
+}
+    
+#inputFileUpload , #inputLinkPicture{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+
+}
+
+
+#btnLoadFile, #btnLinkPicture {
+    border: 2px solid #ffffff;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    position: relative;
+}
+
+#btnLoadFile:hover {
+    /* background-color: darken(#003466, 10%); */
+    cursor: pointer;
+}
+
+#containerUploaded{
+    width: 100%;
+    background-color: #ffffff70;
+    box-shadow: 2px 2px 5px #00000033;
+}
+
+#devLinks{
+    width: 100%;
+    min-height: 100%;
+    background-color: #ffffff70;
+    flex-wrap: wrap;
+    align-content: flex-start; 
+    box-shadow: 2px 2px 5px #00000033;
+    
+}
+
+a{
+    flex-grow: auto;
+}
+
+#btnNewLink, .userLink{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 1px 1px 5px #00000079, 5px 5px 15px inset #99989879;
+    font-size: 1.2em;
+}
+
+#newLink:hover{
+    opacity: 0.5;
+}
+
+.userLink{
+    position: relative;
+    z-index:1;
+}
+
+.deleteLink{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    z-index:100;
+}
+
+
+.fa-minus{
+    display: block;
+    font-size: 0.5em;
+    border-radius: 100%;
+    background-color: #00000025;
+    color: #0000008a
+    
+}
+
+
+.fa-minus:hover {
+    opacity: 0.5;
+}
+
+.linkAddLinks{
+    width: auto;
+    cursor: pointer;
+    text-decoration: unset;
+    height: 50px;
+}
+
+
+
+.logoLink{
+    width: 30px;
+    
+}
+
+#uploadedFiles{
+    width: 100%;
+    min-height: 10vh;
+    max-height: 50vh;
+    background-color: #ffffffbe;
+    box-shadow: 2px 2px 5px #00000033;
+}
+
+.fileContainer{
+    border-bottom: 1px solid #00000015;
+}
+
+.divFileLogo{
+    width: 40px;
+    text-align: center;
+}
+
+.fileLogo{
+    height:20px;
+}
+
+#public, #private{
+    padding: 0.5em 1em;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+#formCommunitySelect{
+    width: auto;
+}
+
+.form-select{
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    height: calc(1.5em + .75rem + 2px);
+}
+
+#select{
+    border: 2px solid #ffffff;
+    background-color: #fff;
+}
+
+.center{
+    position: relative;
+    /* transformieren können */
+    transform: (translate(-50%, -50%));
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+}
+
+
+
+
+.circle1{
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border-radius: 50%;
+    background-image: url(../img/projectImages/blogCat.jpg);
+    background-size: cover;
+    border: 5px solid rgb(19, 36, 109);
+    box-sizing: border-box;
+    animation: animatecircle1 5s linear infinite;
+    
+}
+
+
+.circle2{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(105% - 30px);
+    height: calc(105% - 30px);
+    border-radius: 50%;
+    border: 4px dotted #000;
+    animation: animatecircle2 10s linear infinite;
+    
+}
+
+@keyframes animatecircle1{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes animatecircle2{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+/* blog.php */
+
+#blogMain{
+    background-image: url('../img/projectImages/bg_blog.jpg');
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#blogContainer{
+    background-color: #3a363f;
+    min-height: 70vh;
+    color: #ffffff;
+}
+
+
+#blogImage{
+    max-width: 50%
+}
+
+#blogTyp{
+    font-size: 0.8em;
+}
+
+#btnReturn{
+    margin: 0 auto;
+}
+
+
+/* reminder */
+
+#headlineReminder{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+#dontForget{
+    width:50px;
+}
+
+@media(max-width: 1000px) {
+
+
+    .navbar-toggler{
+        border: 1px solid rgba(0,0,0,0.5) !important;
+        font-size: 1em;
+    }
+
+    .navbar-nav li:hover{
+        background-color: rgba(0, 0, 0, .1);
+    }
+
+    a{
+        background-color: unset;
+    }
+
+    #nav-absolute{
+        position: absolute;
+        top: 0;
+        right: 0.5em;
+    }
+    
+   
+    .nav-item{
+        padding: 0.5em 0;
+    }
+
+    #btn-logout{
+        margin-right: 1.5em !important;
+    }
+
+    /* login */
+
+    #divReminder{
+        max-width: 90%;
+    }
+
+    #blogLogin{
+        flex-direction: column !important;
+    }
+
+    #blogImage{
+        max-width: 80%;
+    }
+
+    #divBlogImage{
+        margin: 0 0 0.5em 0 !important;
+    }
+
+    /* taskmanager */
+
+    #taskH1{
+        font-size: 1.5em;
+    }
+
+    .blendOut{
+        display: none;
+    }
+
+    #formAddTask, #formEditTask{
+        width: 90%;
+    }
+
+    .show, .edit, .delete, .done{
+        margin: 0 !important;
+    }
+
+    #viewShowTask{
+        max-width: 90% !important;
+    }
+
+    #showImage{
+        margin-right: 0.5em;
+    }
+
+    /* development.php */
+    
+    #developmentContainer{
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    #developmentBtns{
+        height: 20vh;
+    }
+
+    #btnLoadFile, #private, #public{
+        
+        font-size: 0.5;
+    }
+
+    #select{
+        margin-top: 0.5em;
+        height: 40px;
+        width: 95%;
+    }
+
+    #containerFiles{
+        padding: 0;
+    }
+    #devLinks{
+        margin-top: 1.5em;
+        margin-left: unset !important;
+        padding: 0;
+        flex-basis: unset !important;
+    }
+
+    /* community */
+
+    #communityContainer{
+        padding: 1em !important;
+    }
+
+    .msg{
+        width: 80% !important;
+    }
+
+    .navbar-brand{
+        display: none !important;
+    }
+
+    .userComment{
+        flex-direction: column;
+    }
+
+    .commentUserName{
+        margin-bottom: 0.2em;
+    }
+
+
+    .commentStamp{
+        margin-bottom: 0 !important;
+        position: unset !important;
+    }
+    
+    
+   
+    .inputNewComment, .btnNewComment, #inputNewMsg{
+        width: 100% !important;
+        margin: 0.5em 0 !important;
+    }
+
+    .writeMsgContainer{
+        margin: 1.5em !important;
+    }
+
+}
+
+

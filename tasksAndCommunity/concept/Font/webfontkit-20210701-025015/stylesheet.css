@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'gready_thin';
+    src: url('gready_personal_use_only-thin-webfont.woff2') format('woff2'),
+         url('gready_personal_use_only-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'gready_regular';
+    src: url('gready_personal_use_only-regular-webfont.woff2') format('woff2'),
+         url('gready_personal_use_only-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
